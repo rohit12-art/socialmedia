@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://socialmedia-blond.vercel.app/users/${_id}/${friendId}`,
+      `https://socialmedia-api-nine.vercel.app/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

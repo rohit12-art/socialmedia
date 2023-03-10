@@ -35,7 +35,7 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const response = await fetch(`https://socialmedia-blond.vercel.app/posts/${postId}/like`, {
+    const response = await fetch(`https://socialmedia-api-nine.vercel.app/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://socialmedia-blond.vercel.app/assets/${picturePath}`}
+          src={`https://socialmedia-api-nine.vercel.app/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
