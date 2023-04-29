@@ -63,11 +63,10 @@ app.use("/posts", postRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
-mongoose
+mongoose.set('strictQuery', false)
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    strictQuery: true,
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
