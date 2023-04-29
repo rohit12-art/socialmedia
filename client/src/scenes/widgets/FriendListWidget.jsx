@@ -12,7 +12,7 @@ const FriendListWidget = ({ userId }) => {
   const friends = useSelector((state) => state.user.friends);
   const getFriends = async () => {
     const response = await fetch(
-      `https://socialmedia-api-nine.vercel.app/users/${userId}/friends`,
+      `https://socialmedia-api-kappa.vercel.app/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

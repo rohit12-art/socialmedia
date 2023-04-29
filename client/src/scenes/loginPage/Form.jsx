@@ -63,7 +63,7 @@ const Form = () => {
     }
     formData.append("picturePath", values.picture.name);
     const savedUserResponse = await fetch(
-      "https://socialmedia-api-nine.vercel.app/auth/register",
+      "https://socialmedia-api-kappa.vercel.app/auth/register",
       {
         method: "POST",
         body: formData,
@@ -78,7 +78,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("https://socialmedia-api-nine.vercel.app/auth/login", {
+    const loggedInResponse = await fetch("https://socialmedia-api-kappa.vercel.app/auth/login", {
       method: "POST",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify(values),
