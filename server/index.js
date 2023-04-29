@@ -45,9 +45,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-app.get("/", (req,res) => {
-   res.send('HeLLO')
-})
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
@@ -58,8 +55,11 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+app.get("/", (req,res) => {
+   res.send('HeLLO')
+})
 // if (process.env.NODE_ENV == "production") {
-//   const path = require("path");
+  //   const path = require("path");
 
 //   app.get("/", (req, res) => {
 //     app.use(express.static(path.resolve(__dirname, "client", "build")));
